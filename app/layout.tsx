@@ -9,7 +9,7 @@ const inter = Inter({
   variable: "--font-inter"
 });
 
-const oswald = Inter({
+const oswald = Oswald({
   subsets: ["latin"],
   display: "swap",
   variable: "--font-oswald"
