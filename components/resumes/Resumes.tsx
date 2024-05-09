@@ -1,8 +1,6 @@
 import { auth } from "@/auth";
 import { fetchResumes } from "@/lib/data/resume";
 import { Button } from "../ui/button";
-import { EllipsisVerticalIcon } from "@heroicons/react/24/outline";
-import Link from "next/link";
 import NoResumeFound from "./NoResumeFound";
 import Item from "./Item";
 

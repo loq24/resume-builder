@@ -76,16 +76,17 @@ model Resume {
 }
 
 model About {
-  id       String  @id @default(uuid())
-  jobTitle String?
-  summary  String?
-  name     String?
-  email    String?
-  phone    String?
-  address  String?
-  website  String?
-  resume   Resume  @relation(fields: [resumeId], references: [id], onDelete: Cascade)
-  resumeId String  @unique
+  id        String  @id @default(uuid())
+  jobTitle  String?
+  summary   String? @db.Text
+  name      String?
+  avatarUrl String?
+  email     String?
+  phone     String?
+  address   String?
+  website   String?
+  resume    Resume  @relation(fields: [resumeId], references: [id], onDelete: Cascade)
+  resumeId  String  @unique
 }
 
 model Skill {

@@ -10,7 +10,7 @@ export default async function NoResumeFound() {
       <DocumentIcon className="w-20" />
       <p className="text-sm font-semibold">No resume found</p>
       <form action={createResume}>
-        <SubmitButton>
+        <SubmitButton className="mt-3">
           <span className="mr-3 text-lg">+</span> Compose
         </SubmitButton>
       </form>
