@@ -92,3 +92,32 @@ export async function updateResumeTitleAction(
     message: "success",
   };
 }
+
+export async function updateResumeAction(
+  id: string,
+  prevState: State,
+  formData: FormData,
+) {
+  const session = await auth();
+  if (!session?.user?.id) {
+    return {
+      code: 403,
+      message: "Warning, session error.",
+    };
+  }
+
+  // PROBLEM:
+  // We have different tables for each tab
+  // But we have a single form
+  // How do we save data to all table once the save button is clicked
+  // How to know that there is a new or updated data in each tab?
+
+  //revalidatePath(`/dashboard/resume/${id}`);
+
+  console.log("formData", formData);
+
+  return {
+    code: 200,
+    message: "success",
+  };
+}
