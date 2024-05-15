@@ -83,7 +83,7 @@ model About {
   avatarUrl String?
   email     String?
   phone     String?
-  address   String?
+  location  String?
   website   String?
   resume    Resume  @relation(fields: [resumeId], references: [id], onDelete: Cascade)
   resumeId  String  @unique
