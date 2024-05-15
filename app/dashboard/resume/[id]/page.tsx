@@ -36,7 +36,7 @@ export default async function Page({ params }: { params: { id: string } }) {
       </div>
 
       <ResumeDetails resume={resume} />
-      <ResumeForm />
+      <ResumeForm id={id} />
     </div>
   );
 }
